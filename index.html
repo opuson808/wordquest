@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WordQuest — Gizlilik ve Destek</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE: formal, sakin, okunur bir yasal metin
+   IDEA: uygulamanın künyesi; tek sütun iyi dizilmiş belge
+   PICTURE: başlıkta uygulamanın mor rengi, küçük kanatlı rozet
+   COLOUR and TYPE: beyaz/koyu zemin, mor #6b4ce6 tek vurgu; Nunito başlık, Inter metin
+   LAYOUT: tek sütun, 720px, üstte bölüm bağlantıları */
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#121019);--ink:light-dark(#1d1a26,#ece9f5);--muted:light-dark(#5d5870,#a7a2b8);--line:light-dark(#e6e2f0,#2b2738);--acc:light-dark(#5b3fd6,#a996ff)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,sans-serif;overflow-x:clip}
+header{background:#2a1d6e;color:#fff;padding:clamp(28px,5vw,56px) max(5vw,16px)}
+header .in,main{max-width:720px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:14px}
+.badge{width:56px;height:56px;flex:none}
+h1{font:800 clamp(30px,5vw,44px)/1.05 Nunito,sans-serif;margin:0;text-wrap:balance}
+header p{margin:10px 0 0;color:#d9d2ff;max-width:56ch}
+nav{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:2}
+nav .scroll{display:flex;gap:6px;max-width:720px;margin:0 auto;padding:8px max(5vw,16px);overflow-x:auto}
+nav a{flex:none;color:var(--acc);text-decoration:none;font-weight:600;padding:10px 12px;border-radius:10px;min-height:44px}
+nav a:hover,nav a:focus-visible{background:color-mix(in srgb,var(--acc) 12%,transparent);outline:none}
+main{padding:8px max(5vw,16px) 64px}
+section{padding-top:28px}
+h2{font:800 30px/1.1 Nunito,sans-serif;margin:24px 0 6px;scroll-margin-top:72px}
+h3{font:800 20px/1.25 Nunito,sans-serif;margin:28px 0 6px}
+p,li{max-width:68ch} ul{padding-left:1.2em} li{margin:4px 0}
+a{color:var(--acc)}
+.card{border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-top:12px}
+.mail{font-weight:600;font-size:18px;user-select:all}
+footer{color:var(--muted);font-size:14px;border-top:1px solid var(--line);margin-top:40px;padding-top:16px}
+html{scroll-padding-top:72px}
+</style></head><body>
+<header><div class="in"><div class="brand"><svg class="badge" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#7c5cff"/><path d="M10 34c6-10 12-12 16-8l-4 12z" fill="#5a3fd1"/><path d="M54 34c-6-10-12-12-16-8l4 12z" fill="#5a3fd1"/><ellipse cx="32" cy="36" rx="13" ry="15" fill="#9b84ff"/><ellipse cx="32" cy="42" rx="7" ry="6" fill="#d8ceff"/><circle cx="27" cy="32" r="4" fill="#fff"/><circle cx="37" cy="32" r="4" fill="#fff"/><circle cx="27" cy="32" r="2" fill="#1d1a26"/><circle cx="37" cy="32" r="2" fill="#1d1a26"/><path d="M20 20l12-6 12 6-12 6z" fill="#1d1a26"/></svg><h1>WordQuest</h1></div>
+<p>Pıtır ile İngilizce öğrenme uygulaması. Gizlilik politikası, kullanım koşulları ve destek bilgileri.</p></div></header>
+<nav><div class="scroll"><a href="#destek">Destek</a><a href="#gizlilik">Gizlilik Politikası</a><a href="#kosullar">Kullanım Koşulları</a></div></nav>
+<main>
+<section id="destek"><h2>Destek</h2>
+<p>Sorun, öneri ya da hesap/veri talebin için bize yaz; en geç 3 iş günü içinde yanıtlarız.</p>
+<div class="card"><div>E-posta</div><div class="mail">opuson808@gmail.com</div>
+<p style="margin:10px 0 0;color:var(--muted)">Uygulama içinden: Profil → Hesap ve gizlilik. Hesabını ve tüm verini Profil → Hesabı sil ile kalıcı olarak silebilirsin.</p></div></section>
+<section id="gizlilik"><h2>Gizlilik Politikası</h2><p>Son güncelleme: 21 Kasım 2026</p>
+<p>Bu politika, WordQuest uygulamasının (“Uygulama”) hangi verileri neden topladığını ve bu veriler üzerindeki haklarını açıklar. Türkiye'de 6698 sayılı KVKK, Avrupa Birliği'nde GDPR kapsamındaki haklarını kullanabilirsin.</p>
+<h3>Hangi verileri topluyoruz</h3>
+<p><strong>Hesap açarsan:</strong>
+- E-posta adresin ve şifren (şifre Supabase tarafından şifrelenmiş olarak saklanır; biz göremeyiz).
+- <strong>Konuşma pratiği:</strong> Mikrofonla söylediğin cümle iPhone'un konuşma tanıma özelliğiyle yazıya çevrilir. Ses kaydı ve bu metin saklanmaz, sunucumuza gönderilmez; yalnızca kaç cümleyi tamamladığın sayılır. Cihazın desteklemiyorsa tanıma Apple'ın sunucusunda yapılır (Apple'ın gizlilik politikası geçerlidir).
+- <strong>Apple ile giriş</strong> yaparsan: Apple'ın bize ilettiği kullanıcı kimliği ve e-posta adresin (e-postanı gizlemeyi seçersen Apple'ın oluşturduğu yönlendirme adresi). Adını almıyoruz; Apple şifrene hiçbir zaman erişmeyiz.
+- Seçtiğin takma ad ve sana verilen 8 haneli arkadaş kodu.
+- Öğrenme ilerlemen: seviye testi sonucun, günlük görevlerin, verdiğin cevaplar, kelime defterin, XP, seri, rozetler, gem bakiyen ve mağaza envanterin.
+- Sosyal özellikler: arkadaşlık istekleri ve arkadaşların, haftalık lig sıralaman, düello skorların, ortak hedeflerin, engellediğin kullanıcılar ve gönderdiğin şikâyetler.
+- <strong>Bildirimler:</strong> Arkadaş bildirimlerini açarsan cihazının bildirim anahtarı (APNs token). Yalnızca sana bildirim göndermek için kullanılır; kapatınca silinir.
+- <strong>Premium:</strong> Abonelik türün, bitiş tarihi ve App Store'un imzaladığı işlem kaydı (Premium Lig ve ortak hedef için). Ödeme bilgilerini Apple işler, biz görmeyiz.
+- <strong>Sınıflar:</strong> Bir sınıfa katılırsan öğretmenin takma adını, seviyeni, haftalık XP'ni, serini, o hafta bitirdiğin görev sayısını ve en son görev yaptığın günü görür. E-posta adresini göremez. Sınıftan istediğin an ayrılabilirsin.
+- <strong>Satın almalar:</strong> Elmas paketi ya da Premium aldığında işlem numarası, Apple'ın sunucusundan doğrulanmak ve aynı alımın iki kez işlenmemesi için saklanır.
+- <strong>Kamerayla kelime:</strong> Çektiğin ya da seçtiğin fotoğraf iPhone'unda Apple'ın görüntü tanıma özelliğiyle işlenir; fotoğraf hiçbir yere gönderilmez ve saklanmaz. Yalnızca öğrendiğini işaretlediğin kelime kaydedilir.
+- <strong>Yapay zekâ sohbeti:</strong> Pıtır'la yazdığın sohbet tamamen iPhone'undaki Apple modeliyle işlenir; hiçbir sunucuya gönderilmez ve saklanmaz.</p>
+<h3>Toplamadıklarımız</h3>
+<ul>
+<li>Premium üyelere reklam göstermiyoruz ve onlar için reklam altyapısı hiç başlatılmaz.</li>
+<li>Konum ve kişiler erişimi istemiyoruz. Kamera, fotoğraf ve mikrofon yalnızca sen ilgili özelliği açtığında kullanılır ve içerik cihazından çıkmaz.</li>
+<li>Üçüncü taraf analiz aracı kullanmıyoruz.</li>
+</ul>
+<h3>Reklamlar</h3>
+<p>Ücretsiz sürümde Google AdMob ile reklam gösterilir: isteğe bağlı ödüllü reklamlar (ipucu ya da elmas karşılığı) ve seyrek olarak görev bitişinde ara reklam. AdMob; cihaz bilgisi, yaklaşık konum (IP'den) ve reklam etkileşimleri gibi verileri reklam göstermek ve ölçmek için işler. Reklam kimliğine (IDFA) yalnızca iOS'un "Takip izni" penceresinde izin verirsen erişilir; izin vermezsen reklamlar kişiselleştirilmez. Avrupa'daki kullanıcılardan Google'ın onay formuyla ayrıca izin istenir ve Profil → Reklam gizlilik ayarları'ndan değiştirilebilir. Google'ın verileri nasıl kullandığı: https://policies.google.com/technologies/partner-sites</p>
+<h3>Verileri nasıl kullanıyoruz</h3>
+<ul>
+<li>Hesabını çalıştırmak ve ilerlemeni cihazların arasında eşitlemek için.</li>
+<li>Günlük görevleri seviyene ve zayıf olduğun konulara göre hazırlamak için.</li>
+<li>Gem ödüllerini ve satın almaları hileye karşı sunucuda doğrulamak için.</li>
+<li>Lig, arkadaşlar ve düello özelliklerini sunmak için. Diğer kullanıcılar yalnızca takma adını, haftalık XP'ni, ligini ve serini görebilir; e-posta adresin hiçbir zaman paylaşılmaz.</li>
+<li>Şikâyetleri incelemek ve topluluk kurallarını uygulamak için.</li>
+</ul>
+<h3>Verilerin nerede saklanır</h3>
+<p>Hesap verilerin Supabase altyapısında (PostgreSQL) saklanır. Her kullanıcı yalnızca kendi verisine erişebilir; erişim kuralları sunucuda zorunlu tutulur. Cihazındaki oturum anahtarı iOS Anahtar Zinciri'nde (Keychain) saklanır.</p>
+<p>Sesli okuma özelliği cihazının kendi İngilizce sesini kullanır; metin hiçbir sunucuya gönderilmez. Hatırlatma bildirimleri cihazında planlanır.</p>
+<h3>Çerezler ve benzeri teknolojiler</h3>
+<p>WordQuest bir mobil uygulamadır ve tarayıcı çerezi kullanmaz. Çerez yerine yalnızca uygulamanın çalışması için zorunlu olan yerel depolama kullanılır:</p>
+<ul>
+<li><strong>Oturum anahtarı:</strong> Giriş yapmış kalman için iOS Anahtar Zinciri'nde (Keychain) saklanır.</li>
+<li><strong>Uygulama ayarları ve ilerleme önbelleği:</strong> İnternet yokken de çalışabilmen için cihazında (UserDefaults ve uygulama dosyaları) tutulur.</li>
+</ul>
+<p>Analiz amaçlı çerez kullanılmaz. Ücretsiz sürümdeki reklamlar için Google AdMob kendi tanımlayıcılarını kullanabilir (yukarıdaki "Reklamlar" bölümü). Bu veriler hesabını sildiğinde veya uygulamayı kaldırdığında cihazından silinir.</p>
+<h3>Saklama süresi ve hesap silme</h3>
+<p>Verilerin hesabın açık olduğu sürece saklanır. <strong>Profil → Hesabı sil</strong> ile hesabını ve sunucudaki tüm verini istediğin an kalıcı olarak silebilirsin. Silme işlemi anında yapılır ve geri alınamaz. Gönderdiğin şikâyetler, topluluk güvenliği için kimliğinden ayrılarak (anonim) saklanabilir.</p>
+<h3>Çocuklar</h3>
+<p>Uygulama 13 yaş ve üzeri kullanıcılar için tasarlanmıştır. 13 yaşından küçükler hesap açmamalıdır; bu yaştakiler Uygulamayı demo modunda, hiçbir veri göndermeden kullanabilir.</p>
+<h3>Hakların</h3>
+<p>Verilerine erişme, düzeltme, silme, işlemeye itiraz etme ve verilerinin bir kopyasını isteme hakkın vardır. Talebini aşağıdaki adrese iletebilirsin; en geç 30 gün içinde yanıtlarız.</p>
+<h3>İletişim</h3>
+<p>E-posta: opuson808@gmail.com</p>
+<p>Bu politikayı değiştirirsek güncel hâlini Uygulamada ve yayımlandığı adreste paylaşırız.</p></section>
+<section id="kosullar"><h2>Kullanım Koşulları</h2><p>Son güncelleme: 21 Kasım 2026</p>
+<p>WordQuest'i kullanarak bu koşulları kabul etmiş olursun.</p>
+<h3>Hesabın</h3>
+<ul>
+<li>Hesap açmak için en az 13 yaşında olmalısın.</li>
+<li>Hesabının güvenliğinden ve şifrenin gizliliğinden sen sorumlusun.</li>
+<li>Hesabını istediğin an Profil → Hesabı sil ile kapatabilirsin.</li>
+</ul>
+<h3>Topluluk kuralları</h3>
+<p>WordQuest'te takma adın, lig sıralaman ve düellolar diğer kullanıcılar tarafından görülebilir. Aşağıdakilere <strong>sıfır tolerans</strong> gösterilir:</p>
+<ul>
+<li>Küfürlü, aşağılayıcı, nefret içeren, cinsel veya şiddet içeren takma adlar.</li>
+<li>Başka kullanıcıları taciz etmek, tehdit etmek veya rahatsız edici istekler göndermek.</li>
+<li>Başkasını taklit etmek (gerçek kişi, marka veya “admin”, “moderatör” gibi adlar).</li>
+<li>Hile yapmak, uygulamanın açıklarını kötüye kullanmak veya sunucuya otomatik istek göndermek.</li>
+</ul>
+<p>Uygunsuz takma adlar otomatik olarak filtrelenir. Rahatsız olduğun bir kullanıcıyı <strong>Arkadaşlar</strong> ekranında <strong>Engelle</strong> ile anında engelleyebilir, <strong>Şikâyet et</strong> ile bize bildirebilirsin. Şikâyetler 24 saat içinde incelenir; kuralları çiğneyen içerik kaldırılır ve hesaplar kalıcı olarak kapatılabilir.</p>
+<h3>Gem, ödüller ve mağaza</h3>
+<p>Gem'ler yalnızca uygulama içinde oynayarak kazanılır ve gerçek para karşılığı satılmaz, devredilemez, nakde çevrilemez. Gem ile alınan eşyalar yalnızca uygulama içinde geçerlidir. Hile ile kazanıldığı tespit edilen gem ve ödüller geri alınabilir.</p>
+<h3>Premium abonelik</h3>
+<ul>
+<li>WordQuest Premium, aylık ya da yıllık otomatik yenilenen bir aboneliktir. Ödeme, satın alma onaylandığında Apple hesabından alınır.</li>
+<li>İlk abonelikte sunulan ücretsiz deneme süresi bitince, deneme bitmeden iptal edilmezse ilk ödeme alınır.</li>
+<li>Abonelik, dönem bitiminden en az 24 saat önce iptal edilmezse aynı süre ve ücretle yenilenir.</li>
+<li>Aboneliğini iPhone'da Ayarlar → Apple Kimliği → Abonelikler bölümünden yönetebilir ve iptal edebilirsin. İptal, mevcut dönemin sonunda geçerli olur.</li>
+<li>İadeler Apple'ın politikalarına göre Apple tarafından yapılır.</li>
+<li>Temel öğrenme özellikleri (seviye testi, günlük görevler, oyunlar, dilbilgisi dersleri) ücretsiz kalır.</li>
+</ul>
+<h3>İçerik</h3>
+<p>Uygulamadaki sorular, hikâyeler ve diğer içerikler eğitim amaçlıdır ve izinsiz kopyalanıp dağıtılamaz. Hikâyelerdeki kişi ve olaylar kurgusaldır.</p>
+<h3>Sorumluluğun sınırı</h3>
+<p>Uygulama “olduğu gibi” sunulur. Kesintisiz veya hatasız çalışacağını garanti edemeyiz; makul olan her önlemi alırız.</p>
+<h3>Değişiklikler ve iletişim</h3>
+<p>Bu koşulları güncelleyebiliriz; önemli değişiklikleri uygulama içinde duyururuz.</p>
+<p>E-posta: opuson808@gmail.com</p></section>
+<footer>WordQuest · Geliştirici: Yalım Andaç Bekmezci · opuson808@gmail.com</footer>
+</main></body></html>
